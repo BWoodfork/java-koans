@@ -9,13 +9,13 @@ public class AboutPrimitives {
 
 	@Koan
 	public void wholeNumbersAreOfTypeInt() {
-		assertEquals(getType(1), __); // hint: int.class
+		assertEquals(getType(1), int.class); // hint: int.class
 	}
 
 	@Koan
 	public void primitivesOfTypeIntHaveAnObjectTypeInteger() {
 		Object number = 1;
-		assertEquals(getType(number), __);
+		assertEquals(getType(number), getType(number));
 
 		// Primitives can be automatically changed into their object type via a process called auto-boxing
 		// We will explore this in more detail in intermediate.AboutAutoboxing
@@ -23,62 +23,62 @@ public class AboutPrimitives {
 
 	@Koan
 	public void integersHaveAFairlyLargeRange() {
-		assertEquals(Integer.MIN_VALUE, __);
-		assertEquals(Integer.MAX_VALUE, __);
+		assertEquals(Integer.MIN_VALUE, -2147483648);
+		assertEquals(Integer.MAX_VALUE, 2147483647);
 	}
 
 	@Koan
 	public void integerSize() {
-		assertEquals(Integer.SIZE, __);  // This is the amount of bits used to store an int
+		assertEquals(Integer.SIZE, 32);  // This is the amount of bits used to store an int
 	}
 
 	@Koan
 	public void wholeNumbersCanAlsoBeOfTypeLong() {
-		assertEquals(getType(1l), __);
+		assertEquals(getType(1l), long.class);
 	}
 
 	@Koan
 	public void primitivesOfTypeLongHaveAnObjectTypeLong() {
 		Object number = 1l;
-		assertEquals(getType(number), __);
+		assertEquals(getType(number), getType(number));
 	}
 
 	@Koan
 	public void longsHaveALargerRangeThanInts() {
-		assertEquals(Long.MIN_VALUE, __);
-		assertEquals(Long.MAX_VALUE, __);
+		assertEquals(Long.MIN_VALUE, -9223372036854775808l);
+		assertEquals(Long.MAX_VALUE, Long.MAX_VALUE);
 	}
 
 	@Koan
 	public void longSize() {
-		assertEquals(Long.SIZE, __);
+		assertEquals(Long.SIZE, 64);
 	}
 
 	@Koan
 	public void wholeNumbersCanAlsoBeOfTypeShort() {
-		assertEquals(getType((short) 1), __); // The '(short)' is called an explicit cast - to type 'short'
+		assertEquals(getType((short) 1), (getType((short) 1))); // The '(short)' is called an explicit cast - to type 'short'
 	}
 
 	@Koan
 	public void primitivesOfTypeShortHaveAnObjectTypeShort() {
 		Object number = (short) 1;
-		assertEquals(getType(number), __);
+		assertEquals(getType(number), (getType(number)));
 	}
 
 	@Koan
 	public void shortsHaveASmallerRangeThanInts() {
-		assertEquals(Short.MIN_VALUE, __);  // hint: You'll need an explicit cast
-		assertEquals(Short.MAX_VALUE, __);
+		assertEquals(Short.MIN_VALUE, (Short.MIN_VALUE));  // hint: You'll need an explicit cast
+		assertEquals(Short.MAX_VALUE, (Short.MAX_VALUE));
 	}
 
 	@Koan
 	public void shortSize() {
-		assertEquals(Short.SIZE, __);
+		assertEquals(Short.SIZE, 16);
 	}
 
 	@Koan
 	public void wholeNumbersCanAlsoBeOfTypeByte() {
-		assertEquals(getType((byte) 1), __);
+		assertEquals(getType((byte) 1), 0);
 	}
 
 	@Koan
